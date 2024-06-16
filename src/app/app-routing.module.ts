@@ -6,6 +6,11 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { RegisterComponent } from './component/register_email/register/register.component';
 import { ForgotPasswordComponent } from './component/register_email/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './component/register_email/varify-email/varify-email.component';
+import { AttendanceComponent } from './component/attendance/attendance.component';
+import { EmployeeComponent } from './component/employee/employee.component';
+import { LeavesComponent } from './component/leaves/leaves.component';
+import { SalaryComponent } from './component/salary/salary.component';
+import { AdvanceComponent } from './component/advance/advance.component';
 
 const routes: Routes = [
   {
@@ -26,6 +31,26 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
+      },
+      {
+        path: 'employee',
+        component: EmployeeComponent,
+      },
+      {
+        path: 'attendance',
+        component: AttendanceComponent,
+      },
+      {
+        path: 'leaves',
+        component: LeavesComponent,
+      },
+      {
+        path: 'salary',
+        component: SalaryComponent,
+      },
+      {
+        path: 'advance',
+        component: AdvanceComponent,
       }
     ]
   }

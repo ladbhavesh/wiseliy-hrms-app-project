@@ -20,6 +20,11 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { RegisterComponent } from './component/register_email/register/register.component';
 import { VarifyEmailComponent } from './component/register_email/varify-email/varify-email.component';
 import { ForgotPasswordComponent } from './component/register_email/forgot-password/forgot-password.component';
+import { EmployeeComponent } from './component/employee/employee.component';
+import { AttendanceComponent } from './component/attendance/attendance.component';
+import { LeavesComponent } from './component/leaves/leaves.component';
+import { AdvanceComponent } from './component/advance/advance.component';
+import { SalaryComponent } from './component/salary/salary.component';
 
 
 @NgModule({
@@ -30,7 +35,12 @@ import { ForgotPasswordComponent } from './component/register_email/forgot-passw
     DashboardComponent,
     RegisterComponent,
     VarifyEmailComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    EmployeeComponent,
+    AttendanceComponent,
+    LeavesComponent,
+    AdvanceComponent,
+    SalaryComponent
   ],
   imports: [
     BrowserModule,
