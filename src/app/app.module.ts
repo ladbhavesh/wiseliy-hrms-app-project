@@ -25,7 +25,11 @@ import { AttendanceComponent } from './component/attendance/attendance.component
 import { LeavesComponent } from './component/leaves/leaves.component';
 import { AdvanceComponent } from './component/advance/advance.component';
 import { SalaryComponent } from './component/salary/salary.component';
-
+import { TableModule } from 'primeng/table';
+import { HttpClientModule } from  '@angular/common/http';
+import { AddEmployeeComponent } from './shared/employee_shared/add-employee/add-employee.component';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import { SalaryComponent } from './component/salary/salary.component';
     AttendanceComponent,
     LeavesComponent,
     AdvanceComponent,
-    SalaryComponent
+    SalaryComponent,
+    AddEmployeeComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,11 @@ import { SalaryComponent } from './component/salary/salary.component';
     FormsModule,
     ToastModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    TableModule,
+    HttpClientModule,
+    DialogModule,
+    InputTextModule
   ],
   providers: [
     MessageService,

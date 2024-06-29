@@ -1,1 +1,51 @@
-<p>employee works!</p>
+<div class="container">
+    <div class="search-bar">
+        <form class="form-inline">
+            <div class="input-group">
+                <input class="form-control shadow-none mr-sm-2 ms-2" type="search" placeholder="Search by employee name"
+                    aria-label="Search">
+                <div class="input-group-append ms-2">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+                <div class="input-group-append ms-2">
+                    <button class="btn btn-danger my-2 my-sm-0" type="submit"
+                        (click)="createEmployeeSidepopup('right')">Add Employee</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- <div class="card">
+        <div class="card-header bg-primary">
+            Employee Portal
+        </div>
+    </div> -->
+
+    <div class="tableView mt-3 table-bordered">
+        <div class="card">
+            <p-table [value]="employeeData" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <!-- <th>Sr.No</th> -->
+                        <th>Name</th>
+                        <th>Contact No</th>
+                        <th>Email</th>
+                        <th>City</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-employee>
+                    <!-- *ngFor="let employee of employeeData; let i = index" -->
+                    <tr class="cursor-pointer">
+                        <!-- <td>{{ i + 1 }}</td> -->
+                        <td>{{ employee.empName }}</td>
+                        <td>{{ employee.empContactNo }}</td>
+                        <td>{{ employee.empEmail }}</td>
+                        <td>{{ employee.city }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
+<app-add-employee [ShowEmployeeAdd]="addTemplateEmployee" [position]="positionAddEmployee" (update)="updateAddEmp()"
+    (hideSideBarModal)="closeaddEmployee($event)"></app-add-employee>
