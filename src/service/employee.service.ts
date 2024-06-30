@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private apiUrl = 'http://onlinetestapi.gerasim.in/api/TeamSync';
+  private apiUrl = 'http://localhost:5020/api/TeamSync';
   constructor(private http: HttpClient) { }
 
   getAllEmployee(): Observable<any> {
